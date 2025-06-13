@@ -1,0 +1,6 @@
+Date,MinTemp,MaxTemp,Rainfall,WindSpeed,Humidity,Pressure,RainToday,RainTomorrow
+2023-01-01,23.5,34.1,0.0,13,58,1012,No,No
+2023-01-02,24.2,32.8,2.5,18,64,1010,Yes,Yes
+2023-01-03,22.8,33.5,0.0,15,61,1011,No,No
+2023-01-04,21.5,31.9,5.1,20,67,1008,Yes,Yes
+2023-01-05,25.1,35.2,0.0,12,59,1013,No,No
