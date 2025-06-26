@@ -1,6 +1,8 @@
 fastapi
 uvicorn
 requests
-langchain==0.1.16
-openai
-python-dotenv
+pydantic
+langchain
+langchain-community
+langchain-core
+langchain-openai
