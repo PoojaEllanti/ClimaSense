@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background: linear-gradient(135deg, #7ed6df, #70a1ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #2f3542;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 0.9em;
+  color: #57606f;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  width: 60%;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 14px;
+  background-color: #3742fa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #2f3542;
+}
+
+.weather-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.weather-box h3 {
+  margin-bottom: 10px;
+  color: #2f3542;
+}
+
+.weather-box p {
+  margin: 8px 0;
+  color: #57606f;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClimaSense</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="logo">
+        ⛅ <span>ClimaSense</span>
+      </div>
+      <p class="tagline">Get real-time weather updates using <strong>LangChain</strong>!</p>
+
+      <div class="input-group">
+        <input type="text" id="locationInput" placeholder="Enter a city..." />
+        <button onclick="getWeather()">Get Weather</button>
+      </div>
+
+      <div class="weather-box" id="weatherBox" style="display: none;">
+        <h3>📍 <span id="locationName"></span></h3>
+        <p>🌦️ <strong id="description"></strong></p>
+        <p>🌡️ Temperature: <strong id="temperature"></strong>°C</p>
+        <p>💨 Wind Speed: <strong id="windSpeed"></strong> km/h</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function getWeather() {
+      const location = document.getElementById('locationInput').value;
+      const weatherBox = document.getElementById('weatherBox');
+      if (!location) return alert('Please enter a location');
+
+      try {
+        const res = await fetch("http://127.0.0.1:8000/weather", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ location }),
+        });
+
+        const data = await res.json();
+        document.getElementById('locationName').textContent = location;
+        document.getElementById('description').textContent = data.description;
+        document.getElementById('temperature').textContent = data.temperature;
+        document.getElementById('windSpeed').textContent = data.wind_speed;
+        weatherBox.style.display = "block";
+      } catch (error) {
+        alert("Failed to fetch weather. Check backend or CORS.");
+        weatherBox.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

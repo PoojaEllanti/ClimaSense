@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+requests
+langchain==0.1.16
+openai
+python-dotenv
